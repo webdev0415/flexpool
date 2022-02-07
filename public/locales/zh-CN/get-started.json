@@ -1,0 +1,267 @@
+{
+  "list": {
+    "head_title": "开始挖矿",
+    "title": "开始挖矿",
+    "nicehash_rental_button": "Nicehash 设置"
+  },
+  "detail": {
+    "title": "{{coin}} 挖矿教程",
+    "note": "Note:",
+    "wallet": {
+      "title": "创建钱包地址",
+      "desc_one": "支持以太币的交易所一般会提供钱包充值，例如 <binance>币安 （推荐链接）</binance>、火币网、<coinbase>Coinbase</coinbase> 等。",
+      "desc_two": "中心化交易所的钱包是托管钱包，相关风险由矿工自行承担。非托管的App及Web钱包、自创匿名钱包地址也可以用。最安全是使用 <strong>硬件钱包</strong>，例如 <ledger>Ledger</ledger> 和 <trezor>Trezor</trezor> 。",
+      "wallet_address": "您的钱包地址",
+      "invalid_address": "钱包地址无效"
+    },
+    "region": {
+      "title": "选择服务器",
+      "description": "选择最低延迟的服务器，确保最佳挖矿性能。下面显示你当前与各服务器之间的网络延迟。",
+      "description_chia": "For the best performance and connection reliability, you should choose the region with the lowest latency to your farming hardware. This table is displaying latency between regional servers and this device.",
+      "table_head": {
+        "location": "地区",
+        "domain": "服务器",
+        "port": "端口",
+        "average_lat": "延迟"
+      },
+      "fastest": "最佳",
+      "backup": "备用"
+    },
+    "ports": {
+      "title": "端口",
+      "description": "我们建议使用SSL安全端口连接服务器。 <more>了解非安全端口的风险</more>。 <strong>注意</strong>: 使用 SSL端口不会增加过期份额率。",
+      "ssl_port": "SSL安全端口",
+      "tcp_port": "TCP端口",
+      "tcp_port_tooltip": "我们并不建议使用非加密的TCP端口，预防中间人攻击，侵吞你的算力。可以在我们的<more>常见问题</more>了解更多。",
+      "high_diff_port": "高难度端口",
+      "high_diff_port_tooltip": "这个端口适用与ASIC矿机或代理服务器下的多台矿机，还有<NiceHash>Nicehash</NiceHash>和其他算力市场上购买的算力。只能在以下的服务器用： "
+    },
+    "worker": {
+      "title": "矿机定名",
+      "description": "建议自定义矿机名字，容易分析矿机情况",
+      "worker_name": "矿机名字",
+      "worker_name_placeholder": "例如：矿机RX580x2"
+    },
+    "software": {
+      "title": "选择挖矿软件",
+      "fee": "费用"
+    },
+    "view": {
+      "title": "矿机监控及收益查看",
+      "description": "开始挖矿十分钟后，数据提交给矿池，在监控页面即可查看矿机运行状态和收益情况。",
+      "cta": "矿工管理"
+    }
+  },
+  "detail_eth": {
+    "title": "以太坊挖矿教程",
+    "pool_details": [
+      {
+        "key": "结算模式",
+        "value": "PPLNS （按最后N份额比例分配）"
+      },
+      {
+        "key": "费率",
+        "value": "0.5%"
+      },
+      {
+        "key": "額外奖励",
+        "value": "90% 矿工可提取价值（MEV）的收入"
+      },
+      {
+        "key": "支付周期",
+        "value": "每小时一轮"
+      },
+      {
+        "key": "起付额度",
+        "value": "自定义额度，0.01 ETH 到最大 100 ETH"
+      },
+      {
+        "key": "区块确认时间",
+        "value": "120 个区块"
+      },
+      {
+        "key": "份额难度",
+        "value": "4 GH"
+      },
+      {
+        "key": "算法",
+        "value": "Ethash"
+      }
+    ],
+    "hardware": [
+      {
+        "title": "显卡矿机",
+        "key": "显示卡",
+        "miners": [
+          {
+            "description": "AMD显卡推荐挖矿软件"
+          },
+          {
+            "description": "NVIDIA 20/30系列显卡推荐挖矿软件"
+          },
+          {
+            "description": "能用4G显卡继续挖以太币的软件"
+          },
+          {
+            "description": "独创专利挖矿软件"
+          },
+          {
+            "description": "算力稳定，持续研创的挖矿软件"
+          }
+        ]
+      }
+    ]
+  },
+  "detail_xch": {
+    "title": "Chia farming",
+    "title_cli": "Chia farming using CLI Farmer",
+    "title_gui": "Chia farming using GUI Farmer",
+    "pool_details": [
+      {
+        "key": "Reward Scheme",
+        "value": "PPLNS (Pay Per Last N Shares)"
+      },
+      {
+        "key": "Pool Fee",
+        "value": "0%"
+      },
+      {
+        "key": "Payout Round",
+        "value": "Once an hour"
+      },
+      {
+        "key": "Payouts",
+        "value": "from 0.01 XCH to 10 XCH"
+      },
+      {
+        "key": "Block confirmation time",
+        "value": "60 Blocks"
+      },
+      {
+        "key": "Relative Lock Height",
+        "value": "100"
+      },
+      {
+        "key": "Mining Algorithm",
+        "value": "Chia PoST"
+      }
+    ],
+    "new_farmer": "New Farmer",
+    "already_farmer": "Already Farmer",
+    "plotnft_create": {
+      "title": "Create your Plot NFT",
+      "title_join": "Create your Plot NFT and point it to Flexpool",
+      "desc_one": "Plot NFT is a smart contract that allows the creation of plots with a possible further change of the reward destination address, which is used for pool switching.",
+      "desc_two": "Flexpool is using the official pool protocol, which means that you will need to create Plot NFT in order to join the pool. Please, note that plots made without Plot NFT (sometimes referenced as OG plots) cannot be used with the Flexpool Chia pool. You can continue to farm them as a solo farmer, but you will need to create new plots pointed to the Plot NFT to contribute to the pool and get rewarded.",
+      "create_command": "You can create the Plot NFT using this command:",
+      "mojo_note": "You will need to have at least 1 mojo (the minimum XCH unit, one trillionth of XCH) to create the Plot NFT contract. If you don't have any funds on your account, please use <chiafaucet>Official XCH Faucet</chiafaucet> to get 100 mojos.",
+      "create_gui_action": "You can create the PlotNFT by clicking on the \"Add a Plot NFT\" button in the \"Pool\" section.",
+      "create_gui_action_two": "Type the Flexpool farming URL to \"Connect to Pool\" input, and confirm Plot NFT creation."
+    },
+    "plotnft_join": {
+      "title": "Assign your Plot NFT to Flexpool",
+      "desc_one": "To switch to Flexpool, you will need to initiate the Plot NFT pool switch. This will change your Plot NFT state to <b>Leaving The Pool</b> for 30 minutes as a security precaution. After that, your Plot NFT will change the state to <b>Farming To Pool</b>, which means that the pool switching has completed successfully.",
+      "assign_command": "You can assign your Plot NFT to Flexpool by using this command:",
+      "assign_gui_action": "You can assign your Plot NFT to Flexpool by clicking on the \"Change Pool\" button, and entering the Flexpool pool URL.",
+      "assign_gui_action_two": "Type the Flexpool farming URL to \"Connect to Pool\" input, and confirm the Pool Switch.",
+      "time_note": "The process may take up to 45 minutes to fully complete. Please be patient."
+    },
+    "plotnft_show": {
+      "title": "Get Plotting and Payout addresses",
+      "desc": "To create plots, you will need to grab the Plotting address, known as P2 Singleton Address. This address is later passed to plotter to create plots bound to your Plot NFT.",
+      "show_command": "To show the PlotNFT details including the required addresses, execute this command:",
+      "grab_addresses": "You will need to grab the following addresses:",
+      "plotting_address": "The address you will use for plotting.",
+      "payout_address": "The address the funds will be paid to. All your statistics will be associated with this wallet address."
+    },
+    "plotters": {
+      "standard_plotter": "Standard Plotter",
+      "madmax_plotter": "madMAx Plotter"
+    },
+    "create_plots": {
+      "title": "Create plots",
+      "standard": {
+        "desc": "In this section, we will show you how to use standard Chia plotter with your newly-created PlotNFT.",
+        "create_plots_command": "To create plots, do:"
+      },
+      "madmax": {
+        "desc": "In this section, we will show you how to use fast <plotter>chia-plotter</plotter> by <madmax>madMAx43v3r</madmax> with your newly-created PlotNFT.",
+        "install_dependencies_command": "Install plotter dependencies (command may vary across different distributions; example is shown for Ubuntu and Debian-like Distributions):",
+        "build_and_install_command": "Build and install the plotter by executing the following commands:",
+        "instructions_note": "Instructions for all platforms are available on <github>chia-plotter GitHub Repository</github>.",
+        "cmake_version_notice": "The build requires the minimum CMake version of 3.14. In older distributions like Ubuntu 18.04, you will be required to install the newer CMake manually.",
+        "create_plots_command": "Now, you can make some plots by doing:"
+      }
+    },
+    "monitor_farm": {
+      "title": "Monitor your farm in Flexpool.io Dashboard",
+      "desc": "To monitor the statistics of your farm, you should enter your Pool Payout Instructions wallet address that you have gathered from the Step #3 to the address search bar on our Home page.",
+      "desc_gui": "To monitor the statistics of your farm, you should enter your Payout Address that you have gathered from Step #2 into the address search bar on our Home page."
+    },
+    "gather_payout_address_gui": {
+      "title": "Gather your payout address",
+      "desc": "This address is your farm identifier on Flexpool. All payouts you receive will be targeted on that address, and you can monitor statistics by it on the Flexpool.io website.",
+      "not_found_note": "If the Payout Instructions address is missing, please find it in the Wallets tab. If you can't find it there either, please use <b>chia plotnft show</b> CLI command in order to get the Payout Instructions Address."
+    },
+    "hardware": [
+      {
+        "title": "Chia Farmer (CLI)",
+        "key": "XCH-CLI"
+      },
+      {
+        "title": "Chia Farmer (GUI)",
+        "key": "XCH-GUI"
+      },
+      {
+        "title": "FlexFarmer",
+        "key": "flexfarmer"
+      }
+    ]
+  },
+  "regions": {
+    "us-east": "美国（东岸）",
+    "us-west": "美国（西岸）",
+    "de": "德国",
+    "se": "瑞典",
+    "sg": "新加坡",
+    "au": "澳洲",
+    "br": "巴西",
+    "kr": "南韩"
+  },
+  "cmd_keys": {
+    "CLOSEST_SERVER": "最近服务器地址",
+    "WALLET_ADDRESS": "钱包地址",
+    "WORKER_NAME": "矿机名字"
+  },
+  "nicehash": {
+    "head_title": "Nicehash 设置",
+    "title": "Nicehash 设置",
+    "description": "Nicehash 是全球规模最大的算力市场，购买的算力怎么在Flexpool使用？",
+    "step_one": {
+      "title": "打开算力市场页面",
+      "description": [
+        "Once you've registered on NiceHash and activated the Hashrate Marketplace account, you can head to your rental dashboard and choose the {{algorithm}} mining algorithm.",
+        "下面选择矿池列表，按 \"添加新矿池\""
+      ]
+    },
+    "step_two": {
+      "title": "填写 Flexpool 矿池地址和钱包地址",
+      "description": [
+        "Stratum hostname or IP 选择适用的市场地区，例如 EU-West 就用 Flexpool 德国服务器。端口需用 <strong>14444</strong> 高难度端口。只有下列服务器支持 Nicehash。",
+        "用户名用钱包地址，密码只需一个 ”x“。"
+      ]
+    },
+    "step_three": {
+      "title": "测试矿池",
+      "description": [
+        "按 “测试矿池”，测试一下填写的矿池信息是否正确。提示 “Tested pool is compatible”，测说明设置的矿池信息无误。"
+      ]
+    },
+    "step_four": {
+      "title": "Nicehash 与 Flexpool 成功配合使用！",
+      "description": [
+        "保存矿池设置，可以去 Nicehash 实时算力市场创建新订单（标准或长效订单），购买的算力可以在 Flexpool上挖矿！"
+      ]
+    }
+  }
+}

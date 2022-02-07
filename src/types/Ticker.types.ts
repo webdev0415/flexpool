@@ -1,0 +1,15 @@
+export type Ticker =
+  | 'eth'
+  | 'xch'
+  | 'usd'
+  | 'cad'
+  | 'eur'
+  | 'gbp'
+  | 'sgd'
+  | 'aud'
+  | 'brl'
+  | 'cny'
+  | 'rub'
+  | 'uah'
+  | 'czk'
+  | 'pln';

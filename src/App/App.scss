@@ -1,0 +1,375 @@
+@import 'src/pages/Docs/ApiDocs.scss';
+@import 'src/components/Tooltip.scss';
+@import 'styles/util.scss';
+
+html,
+body {
+  width: 100%;
+  overscroll-behavior-y: contain;
+}
+
+body {
+  --text-primary: #111432;
+  --text-secondary: #404a59;
+  --text-tertiary: #77869e;
+  --text-on-bg: #fff;
+  --bg-primary: #fff;
+  --bg-secondary: #f5f5f9;
+  --primary: #0069ff;
+  --primary-shadow: rgba(0, 105, 255, 0.5);
+  --secondary: #1633ff;
+  --success: #15cd72;
+  --success-shadow: rgba(21, 205, 114, 0.5);
+  --danger: #ed4f32;
+  --error: #ed4f32;
+  --danger-shadow: rgba(237, 79, 50, 0.5);
+  --warning: #eab02e;
+  --warning-shadow: rgba(237, 180, 49, 0.5);
+  --border-color: #e8eff7;
+  --overlay: rgba(255, 255, 255, 0.5);
+  --bad-luck-color: #ccc;
+
+  --color-discord: #7289da;
+
+  --code-comment: #6a737d;
+  --code-keyword: #d73a49;
+  --code-key: #22863a;
+  --code-constant: #005cc5;
+  --code-string: #032f62;
+  --code-number: #005cc5;
+
+  @media (prefers-color-scheme: dark) {
+    --bg-primary: #151519;
+    --bg-secondary: #1c1c1f;
+    --border-color: #333;
+    --text-secondary: #ccc;
+    --text-primary: #eee;
+    --overlay: rgba(0, 0, 0, 0.5);
+    --bad-luck-color: #bbb;
+
+    // ! Don't forget to edit the values in src/App/AppTheme.tsx
+    // ! too for the dark theme to work
+
+    --code-comment: #8b949e;
+    --code-keyword: #ff7b72;
+    --code-key: #7ee787;
+    --code-constant: #79c0ff;
+    --code-string: #a5d6ff;
+    --code-number: #79c0ff;
+
+    svg tspan {
+      fill: var(--text-primary);
+    }
+  }
+
+  background: var(--bg-primary);
+  width: 100vw;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+body.scroll-lock {
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+
+p,
+li {
+  max-width: 830px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  & + * {
+    margin-top: 0.5rem;
+  }
+}
+* + p {
+  margin-top: 0.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-primary);
+  & + * {
+    margin-top: 1rem;
+  }
+  & + p {
+    margin-top: 0.5rem;
+  }
+}
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5 {
+  margin-top: 1.5em;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+li {
+  margin-left: 1.5rem;
+}
+
+/** tables **/
+
+table {
+  // overflow-x: auto;
+  // display: block;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  border-spacing: 0;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+}
+// table tbody,
+// table thead {
+//   display: table;
+//   width: 100%;
+// }
+
+td,
+th {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  &:first-child {
+    padding-left: 1.5rem;
+  }
+  &:last-child {
+    padding-right: 1.5rem;
+  }
+}
+
+td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: left;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-top: 1px solid var(--border-color);
+
+  color: var(--text-primary);
+}
+
+tr:first-child td {
+  border-top: none;
+}
+
+thead td,
+th {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  white-space: nowrap;
+
+  font-weight: 700;
+  text-align: left;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/**
+scrllbar
+**/
+
+* {
+  scrollbar-color: var(--border-color);
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    background-color: var(--bg-primary);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bg-secondary);
+    // background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 9px;
+  }
+
+  @media screen and (max-width: 768px) {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+    }
+  }
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+code {
+  font-family: 'Roboto Mono';
+  line-height: 1.4;
+}
+
+input,
+button,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: none !important;
+}
+
+input {
+  display: block;
+  width: 100%;
+  cursor: text;
+  font-weight: 600;
+  background: var(--bg-secondary);
+  border: 1px solid transparent;
+  &:focus {
+    border-color: var(--primary);
+  }
+  height: 48px;
+  outline: none;
+  border-radius: none;
+  color: var(--text-primary);
+  padding: 0 1rem;
+}
+
+.burger {
+  font-size: 12px;
+
+  font-size: 8px;
+  height: 3em;
+  width: 3em;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s all;
+  -webkit-tap-highlight-color: transparent;
+
+  .burger-lines:after {
+    left: 0;
+    top: -1em;
+  }
+  .burger-lines:before {
+    left: 1em;
+    top: 1em;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%;
+  }
+  .burger-lines {
+    top: 50%;
+    margin-top: -0.125em;
+    &,
+    &:after,
+    &:before {
+      pointer-events: none;
+      display: block;
+      content: '';
+      width: 100%;
+      border-radius: 4px;
+      background-color: var(--text-primary);
+      height: 4px;
+      position: absolute;
+      transform: rotate(0);
+    }
+    &:after {
+      left: 0;
+      top: -1em;
+    }
+    &:before {
+      left: 1em;
+      top: 1em;
+    }
+  }
+}
+
+.burger.burger-slip {
+  .burger-lines {
+    &:after,
+    &:before {
+      width: 2em;
+    }
+    &,
+    &:after,
+    &:before {
+      transition: all 0.2s;
+    }
+  }
+
+  &.open {
+    .burger-lines {
+      & {
+        transform: translateX(-2em);
+        background-color: transparent;
+      }
+      &:before,
+      &:after {
+        width: 3em;
+        left: 0em;
+        top: 0px;
+      }
+      &:before {
+        transform: translateX(2em) rotate(135deg);
+      }
+      &:after {
+        transform: translateX(2em) rotate(-135deg);
+      }
+    }
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 1000ms;
+}
